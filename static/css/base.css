@@ -1,9 +1,19 @@
+head-btn {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+head-btn img {
+    display: block;
+}
+
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/Wizard.Barristers_.Benmashi.Cecil.full.2544053.jpg') no-repeat center center fixed;
+    background: url('/media/fmci-banner.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
