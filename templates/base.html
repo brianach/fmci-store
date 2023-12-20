@@ -45,12 +45,12 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center">
                 <button class="bg-transparent border-0">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link"><img src="/media/fmci-logo.svg"></a>
                 </button>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">
                         <input class="form-control border fmci-search-border rounded-0" type="text" name="q"
@@ -67,13 +67,22 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-head.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
+            </div>
+            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
@@ -90,22 +99,31 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
-                            href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
+
                 </ul>
+            </div>
+            <div class="col-12 col-lg-1 my-auto py-1 py-lg-0">
+                <li class="list-inline-item">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
+                        href="">
+                        <div class="text-center">
+                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                $0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div id="info-banner" class="row text-center">
+            <div class="col event-banner text-black">
+                <h4 class="logo-font my-1">Don't forget to book your seat for Future Motion 24 !</h4>
             </div>
         </div>
     </header>

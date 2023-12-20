@@ -8,12 +8,20 @@
     padding: 0;
 }
 
+.topnav {
+    justify-content: center;
+}
+
 .head-btn img {
     display: block;
 }
 
 .fmci-search-border {
     border-color: #457893 !important;
+}
+
+.event-banner {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 html {
@@ -85,8 +93,8 @@ body {
     }
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+/* fixed top navbar only on large and up */
+@media (min-width: 1400px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
