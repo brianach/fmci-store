@@ -1,0 +1,145 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi001",
+            "name": "Baseball Cap",
+            "description": "Snapback retro design baseball cap with two color peak. Size adjustment at back. 100% polyester",
+            "price": 14.99,
+            "category": 2,
+            "image-one": "/media/baseball-frn.png",
+            "image-two": "/media/baseball-bak.png"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi002",
+            "name": "Beanie",
+            "description": "Classic casual organic fisherman beanie from Stanley/Stella. Sturdy rib knit. Four structural seams on top. Single, simple turn-up Material: 95% organic cotton, 5% elastane",
+            "price": 9.99,
+            "category": 2,
+            "image-one": "/media/beanie-frn.png",
+            "image-two": "/media/beanie-bak.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi003",
+            "name": "Bucket Hat",
+            "description": "Sustainable bucket hat from Stanley/Stella. Outer Layer: 80 % recycled cotton, 20 % recycled polyester; Inner Layer: 100 % cotton (from organic cultivation)",
+            "price": 14.99,
+            "category": 2,
+            "image-one": "/media/bucket-hat-frn.png",
+            "image-two": "/media/bucket-hat-bak.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi004",
+            "name": "Mens T-Shirt",
+            "description": "Comes highly recommended! Top quality and supreme print results with all print methods. Fabric weight: 150 g/m². Fair and sustainable.",
+            "price": 14.99,
+            "category": 2,
+            "image-one": "/media/mens-tee-frn.png",
+            "image-two": "/media/mens-tee-bak.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi005",
+            "name": "Womens T-Shirt",
+            "description": "Comes highly recommended! Top quality and supreme print results with all print methods. Fabric weight: 150 g/m². Fair and sustainable.",
+            "price": 14.99,
+            "category": 2,
+            "image-one": "/media/womens-tee-frn.png",
+            "image-two": "/media/womens-tee-bak.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi006",
+            "name": "Hoodie",
+            "description": "Premium comfortable hoodie. Inner pocket and a small loop on the hood to serve as a hook for handy headphones attachment. Durable quality: 280 g/m². Material: 80% cotton, 20% polyester",
+            "price": 24.99,
+            "category": 2,
+            "image-one": "/media/hoodie-front.png",
+            "image-two": "/media/hoodie-back.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi007",
+            "name": "Adult Backpack",
+            "description": "Main compartment with double zipper and zipped front pocket. Holding capacity: 15.7 litres. Fabric: 100% polyester",
+            "price": 24.99,
+            "category": 1,
+            "image-one": "/media/backpak-adult.png",
+            "image-two": ""
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi008",
+            "name": "Childs Backpack",
+            "description": "Main compartment with double zipper and zipped front pocket. Holding capacity: 15.7 litres. Fabric: 100% polyester",
+            "price": 19.99,
+            "category": 1,
+            "image-one": "/media/backpak-kids.png",
+            "image-two": ""
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi009",
+            "name": "Umbrella",
+            "description": "Length, folded: 24cm. Handy Velcro® fastener and protective sleeve. Material: Plastic, metal, covering made of 100% polyester",
+            "price": 14.99,
+            "category": 1,
+            "image-one": "/media/brolly.png",
+            "image-two": ""
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi010",
+            "name": "Tote",
+            "description": "Handle length: approx 12” (30cm). Holding capacity: 10 litres. Light consistency: 140 g/m². Fabrics: 100% cotton",
+            "price": 9.99,
+            "category": 1,
+            "image-one": "/media/bag.png",
+            "image-two": ""
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "fmi010",
+            "name": "Mug",
+            "description": "Dishwasher-resistant. Scratch-proof and UV-resistant. Holding capacity: 325ml. Material: Ceramics.",
+            "price": 4.99,
+            "category": 1,
+            "image-one": "/media/mug.png",
+            "image-two": ""
+        }
+    }
+]
