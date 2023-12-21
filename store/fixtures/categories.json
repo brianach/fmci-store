@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1,
+        "model": "store.category",
+        "fields": {
+            "name": "headwear",
+            "friendly_name": "Headwear"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "store.category",
+        "fields": {
+            "name": "clothing",
+            "friendly_name": "Clothing"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "store.category",
+        "fields": {
+            "name": "accessories",
+            "friendly_name": "Accessories"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "store.category",
+        "fields": {
+            "name": "services",
+            "friendly_name": "Services"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "store.category",
+        "fields": {
+            "name": "misc",
+            "friendly_name": "Misc"
+        }
+    }
+]
