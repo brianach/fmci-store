@@ -1,15 +1,15 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-
         <li class="nav-item dropdown">
             <a class="nav-link text-white mr-1.5" href="#" id="store-link" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                Merch
+                Store
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="store-link">
                 <a href="" class="dropdown-item">Headwear</a>
                 <a href="" class="dropdown-item">Clothing</a>
                 <a href="" class="dropdown-item">Accessories</a>
+                <a href="store" class="dropdown-item">Everything</a>
             </div>
         </li>
 
@@ -22,7 +22,6 @@
                 <a href="" class="dropdown-item">Digital Twin</a>
                 <a href="" class="dropdown-item">Open Shift Containers</a>
                 <a href="" class="dropdown-item">CPUs &amp; GPUs</a>
-
             </div>
         </li>
 
@@ -44,8 +43,7 @@
                 Account
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
+                {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                 <a href="" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="" class="dropdown-item">My Profile</a>
@@ -56,6 +54,5 @@
                 {% endif %}
             </div>
         </li>
-
     </ul>
 </div>
