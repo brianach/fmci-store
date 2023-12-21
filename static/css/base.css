@@ -1,6 +1,6 @@
-.fixed-top {
+/*.fixed-top {
     background-color: rgba(255, 255, 255, 0.05);
-}
+}*/
 
 .head-btn button {
     background: transparent;
@@ -84,10 +84,10 @@ body {
     border: 1px solid black !important;
 }
 
-/* -------------------------------- Media Queries */
+/* Media Queries */
 
 /* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
+@media (min-width: 980px) {
     .container {
         max-width: 80%;
     }
