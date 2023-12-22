@@ -26,12 +26,12 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if storeitem.image_one %}
-                        <a href="">
+                        <a href="{% url 'storeitem_detail' storeitem.id %}">
                             <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}"
                                 alt="{{ storeitem.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'storeitem_detail' storeitem.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ storeitem.name }}">
                         </a>
