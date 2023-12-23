@@ -15,9 +15,9 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
-                {% if storeitem.image %}
+                {% if storeitem.image_one %}
                 <a href="{{ storeitem.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ storeitem.image.url }}" alt="{{ storeitem.name }}">
+                    <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}" alt="{{ storeitem.name }}">
                 </a>
                 {% else %}
                 <a href="">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
+            <div class="storeitem-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ storeitem.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ storeitem.price }}</p>
                 <p class="mt-3">{{ storeitem.description }}</p>

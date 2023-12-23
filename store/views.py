@@ -12,16 +12,15 @@ def store(request):
         'store': store,
     }
 
-    return render(request, 'store/store.html', context)
+    return render(request, 'store.html', context)
 
     
 def store_detail(request, store_id):
     """ A view to show individual store details """
 
-    store = get_object_or_404(store, pk=store_id)
-
+    storeitem = get_object_or_404(Store, pk=store_id)
     context = {
-        'store': store,
+        'storeitem': storeitem,
     }
 
-    return render(request, 'stores/store_detail.html', context)
+    return render(request, 'store_detail.html', context)
