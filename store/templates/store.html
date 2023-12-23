@@ -10,7 +10,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
+
+<div class="overlay store-back-color"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -25,7 +26,7 @@
                 {% for storeitem in store %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <!---->
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 store-back-color">
                         {% if storeitem.image_one %}
                         <a href="{% url 'store_detail' storeitem.id %}">
                             <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}"
@@ -40,10 +41,11 @@
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ storeitem.name }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ storeitem.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold store-back-color">
+                                        ${{ storeitem.price }}</p>
                                 </div>
                             </div>
                         </div>
@@ -74,4 +76,5 @@
         </div>
     </div>
 </div>
+</body>
 {% endblock %}
