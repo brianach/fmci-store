@@ -96,6 +96,14 @@ body {
     z-index: -1;
 }
 
+.store-back-color {
+    background-color: #f2f2f2;
+}
+
+.card-footer {
+    background-color: #f2f2f2;
+}
+
 .card .image-two {
     object-fit: contain;
     display: none;
@@ -112,12 +120,20 @@ body {
     display: inline;
 }
 
-.store-back-color {
-    background-color: #f2f2f2;
+.image-container .image-two {
+    object-fit: contain;
+    display: none;
+    /*height: 100%;*/
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
-.card-footer {
+.image-container:hover .image-two {
     background-color: #f2f2f2;
+    display: inline;
 }
 
 /* Media Queries */

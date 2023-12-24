@@ -18,6 +18,9 @@
                 {% if storeitem.image_one %}
                 <a href="{{ storeitem.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}" alt="{{ storeitem.name }}">
+                    {% if storeitem.image_two %}
+                    <img class="card-img-top image-two" src="{{ storeitem.image_two.url }}" alt="{{ storeitem.name }}">
+                    {% endif %}
                 </a>
                 {% else %}
                 <a href="">
