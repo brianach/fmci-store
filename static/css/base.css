@@ -95,6 +95,19 @@ body {
     z-index: -1;
 }
 
+.card .image-two {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.card:hover .image-two {
+    display: inline;
+}
 
 .store-back-color {
     background-color: #f2f2f2;

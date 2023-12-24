@@ -31,6 +31,10 @@
                         <a href="{% url 'store_detail' storeitem.id %}">
                             <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}"
                                 alt="{{ storeitem.name }}">
+                            {% if storeitem.image_two %}
+                            <img class="card-img-top image-two" src="{{ storeitem.image_two.url }}"
+                                alt="{{ storeitem.name }}">
+                            {% endif %}
                         </a>
                         {% else %}
                         <a href="{% url 'store_detail' storeitem.id %}">
@@ -50,12 +54,9 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
+
                 {% if forloop.counter|divisibleby:2 %}
                 <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
                     <hr>
