@@ -7,7 +7,7 @@
             "name": "Baseball Cap",
             "description": "Snapback retro design baseball cap with two color peak. Size adjustment at back. 100% polyester",
             "price": 14.99,
-            "category": 2,
+            "category": 1,
             "image_one": "baseball-frn.png",
             "image_two": "baseball-bak.png"
         }
@@ -20,7 +20,7 @@
             "name": "Beanie",
             "description": "Classic casual organic fisherman beanie from Stanley/Stella. Sturdy rib knit. Four structural seams on top. Single, simple turn-up Material: 95% organic cotton, 5% elastane",
             "price": 9.99,
-            "category": 2,
+            "category": 1,
             "image_one": "beanie-frn.png",
             "image_two": "beanie-bak.png"
         }
@@ -33,7 +33,7 @@
             "name": "Bucket Hat",
             "description": "Sustainable bucket hat from Stanley/Stella. Outer Layer: 80 % recycled cotton, 20 % recycled polyester; Inner Layer: 100 % cotton (from organic cultivation)",
             "price": 14.99,
-            "category": 2,
+            "category": 1,
             "image_one": "bucket-hat-frn.png",
             "image_two": "bucket-hat-bak.png"
         }
@@ -85,7 +85,7 @@
             "name": "Adult Backpack",
             "description": "Main compartment with double zipper and zipped front pocket. Holding capacity: 15.7 litres. Fabric: 100% polyester",
             "price": 24.99,
-            "category": 1,
+            "category": 3,
             "image_one": "backpak-adult.png",
             "image_two": ""
         }
@@ -98,7 +98,7 @@
             "name": "Childs Backpack",
             "description": "Main compartment with double zipper and zipped front pocket. Holding capacity: 15.7 litres. Fabric: 100% polyester",
             "price": 19.99,
-            "category": 1,
+            "category": 3,
             "image_one": "backpak-kids.png",
             "image_two": ""
         }
@@ -111,7 +111,7 @@
             "name": "Umbrella",
             "description": "Length, folded: 24cm. Handy Velcro® fastener and protective sleeve. Material: Plastic, metal, covering made of 100% polyester",
             "price": 14.99,
-            "category": 1,
+            "category": 3,
             "image_one": "brolly.png",
             "image_two": ""
         }
@@ -124,7 +124,7 @@
             "name": "Tote",
             "description": "Handle length: approx 12” (30cm). Holding capacity: 10 litres. Light consistency: 140 g/m². Fabrics: 100% cotton",
             "price": 9.99,
-            "category": 1,
+            "category": 3,
             "image_one": "bag.png",
             "image_two": ""
         }
@@ -137,7 +137,7 @@
             "name": "Mug",
             "description": "Dishwasher-resistant. Scratch-proof and UV-resistant. Holding capacity: 325ml. Material: Ceramics.",
             "price": 4.99,
-            "category": 1,
+            "category": 3,
             "image_one": "mug.png",
             "image_two": ""
         }
