@@ -27,21 +27,23 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <!---->
                     <div class="card h-100 border-0 store-back-color">
-                        {% if storeitem.image_one %}
-                        <a href="{% url 'store_detail' storeitem.id %}">
-                            <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}"
-                                alt="{{ storeitem.name }}">
-                            {% if storeitem.image_two %}
-                            <img class="card-img-top image-two" src="{{ storeitem.image_two.url }}"
-                                alt="{{ storeitem.name }}">
+                        <div class="image-container">
+                            {% if storeitem.image_one %}
+                            <a href="{% url 'store_detail' storeitem.id %}">
+                                <img class="card-img-top image-container img-fluid" src="{{ storeitem.image_one.url }}"
+                                    alt="{{ storeitem.name }}">
+                                {% if storeitem.image_two %}
+                                <img class="card-img-top image-container image-two" src="{{ storeitem.image_two.url }}"
+                                    alt="{{ storeitem.name }}">
+                                {% endif %}
+                            </a>
+                            {% else %}
+                            <a href="{% url 'store_detail' storeitem.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ storeitem.name }}">
+                            </a>
                             {% endif %}
-                        </a>
-                        {% else %}
-                        <a href="{% url 'store_detail' storeitem.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ storeitem.name }}">
-                        </a>
-                        {% endif %}
+                        </div>
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ storeitem.name }}</p>
                         </div>
