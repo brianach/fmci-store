@@ -11,8 +11,24 @@ def store(request):
     store = Store.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                store = store.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            store = store.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             store = store.filter(category__name__in=categories)
@@ -27,10 +43,13 @@ def store(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             store = store.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'store': store,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'store.html', context)
