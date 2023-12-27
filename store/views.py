@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Store, Category
 
 # Create your views here.
@@ -22,6 +23,8 @@ def store(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 store = store.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -51,7 +54,7 @@ def store(request):
         'store': store,
         'search_term': query,
         'current_categories': categories,
-        #'current_sorting': current_sorting,
+        'current_sorting': current_sorting,
         'current_category': current_category,
     }
 
