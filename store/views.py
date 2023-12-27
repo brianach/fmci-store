@@ -51,7 +51,7 @@ def store(request):
         'store': store,
         'search_term': query,
         'current_categories': categories,
-        'current_sorting': current_sorting,
+        #'current_sorting': current_sorting,
         'current_category': current_category,
     }
 
