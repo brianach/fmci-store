@@ -45,11 +45,14 @@ def store(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    current_category = request.GET.get('category', 'Store')
+
     context = {
         'store': store,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'current_category': current_category,
     }
 
     return render(request, 'store.html', context)
