@@ -92,7 +92,6 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    /*background: white;*/
     z-index: -1;
 }
 
@@ -107,7 +106,6 @@ body {
 .card .image-two {
     object-fit: contain;
     display: none;
-    /*height: 100%;*/
     width: 100%;
     position: absolute;
     top: 0;
