@@ -8,8 +8,8 @@
             "description": "Snapback retro design baseball cap with two color peak. Size adjustment at back. 100% polyester",
             "price": 14.99,
             "category": 1,
-            "image_one": "baseball-frn.png",
-            "image_two": "baseball-bak.png"
+            "image_one": "baseball-frn.webp",
+            "image_two": "baseball-bak.webp"
         }
     },
     {
@@ -21,8 +21,8 @@
             "description": "Classic casual organic fisherman beanie from Stanley/Stella. Sturdy rib knit. Four structural seams on top. Single, simple turn-up Material: 95% organic cotton, 5% elastane",
             "price": 9.99,
             "category": 1,
-            "image_one": "beanie-frn.png",
-            "image_two": "beanie-bak.png"
+            "image_one": "beanie-frn.webp",
+            "image_two": "beanie-bak.webp"
         }
     },
     {
@@ -34,8 +34,8 @@
             "description": "Sustainable bucket hat from Stanley/Stella. Outer Layer: 80 % recycled cotton, 20 % recycled polyester; Inner Layer: 100 % cotton (from organic cultivation)",
             "price": 14.99,
             "category": 1,
-            "image_one": "bucket-hat-frn.png",
-            "image_two": "bucket-hat-bak.png"
+            "image_one": "bucket-hat-frn.webp",
+            "image_two": "bucket-hat-bak.webp"
         }
     },
     {
@@ -47,8 +47,8 @@
             "description": "Comes highly recommended! Top quality and supreme print results with all print methods. Fabric weight: 150 g/m². Fair and sustainable.",
             "price": 14.99,
             "category": 2,
-            "image_one": "mens-tee-frn.png",
-            "image_two": "mens-tee-bak.png"
+            "image_one": "mens-tee-frn.webp",
+            "image_two": "mens-tee-bak.webp"
         }
     },
     {
@@ -60,8 +60,8 @@
             "description": "Comes highly recommended! Top quality and supreme print results with all print methods. Fabric weight: 150 g/m². Fair and sustainable.",
             "price": 14.99,
             "category": 2,
-            "image_one": "womens-tee-frn.png",
-            "image_two": "womens-tee-bak.png"
+            "image_one": "womens-tee-frn.webp",
+            "image_two": "womens-tee-bak.webp"
         }
     },
     {
@@ -73,8 +73,8 @@
             "description": "Premium comfortable hoodie. Inner pocket and a small loop on the hood to serve as a hook for handy headphones attachment. Durable quality: 280 g/m². Material: 80% cotton, 20% polyester",
             "price": 24.99,
             "category": 2,
-            "image_one": "hoodie-front.png",
-            "image_two": "hoodie-back.png"
+            "image_one": "hoodie-front.webp",
+            "image_two": "hoodie-back.webp"
         }
     },
     {
@@ -86,7 +86,7 @@
             "description": "Main compartment with double zipper and zipped front pocket. Holding capacity: 15.7 litres. Fabric: 100% polyester",
             "price": 24.99,
             "category": 3,
-            "image_one": "backpak-adult.png",
+            "image_one": "backpak-adult.webp",
             "image_two": ""
         }
     },
@@ -99,7 +99,7 @@
             "description": "Main compartment with double zipper and zipped front pocket. Holding capacity: 15.7 litres. Fabric: 100% polyester",
             "price": 19.99,
             "category": 3,
-            "image_one": "backpak-kids.png",
+            "image_one": "backpak-kids.webp",
             "image_two": ""
         }
     },
@@ -112,7 +112,7 @@
             "description": "Length, folded: 24cm. Handy Velcro® fastener and protective sleeve. Material: Plastic, metal, covering made of 100% polyester",
             "price": 14.99,
             "category": 3,
-            "image_one": "brolly.png",
+            "image_one": "brolly.webp",
             "image_two": ""
         }
     },
@@ -125,7 +125,7 @@
             "description": "Handle length: approx 12” (30cm). Holding capacity: 10 litres. Light consistency: 140 g/m². Fabrics: 100% cotton",
             "price": 9.99,
             "category": 3,
-            "image_one": "bag.png",
+            "image_one": "bag.webp",
             "image_two": ""
         }
     },
@@ -138,7 +138,7 @@
             "description": "Dishwasher-resistant. Scratch-proof and UV-resistant. Holding capacity: 325ml. Material: Ceramics.",
             "price": 4.99,
             "category": 3,
-            "image_one": "mug.png",
+            "image_one": "mug.webp",
             "image_two": ""
         }
     }

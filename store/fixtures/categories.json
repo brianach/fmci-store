@@ -35,8 +35,8 @@
         "pk": 5,
         "model": "store.category",
         "fields": {
-            "name": "workspaces",
-            "friendly_name": "workspaces"
+            "name": "spaces",
+            "friendly_name": "Spaces"
         }
     }
 ]
