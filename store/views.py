@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import StoreItem, Category
 
 # Create your views here.
@@ -10,7 +11,7 @@ from .models import StoreItem, Category
 def all_storeitems(request):
     """ A view to return store page """
 
-    storeitems = StoreItem.objects.all()
+    store = StoreItem.objects.all()
     query = None
     categories = None
     sort = None
@@ -23,7 +24,7 @@ def all_storeitems(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                storeitems = storeitems.annotate(lower_name=Lower('name'))
+                store = store.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
 
@@ -31,11 +32,11 @@ def all_storeitems(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            storeitems = storeitems.order_by(sortkey)
+            store = store.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
-            storeitems = storeitems.filter(category__name__in=categories)
+            store = store.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -47,14 +48,14 @@ def all_storeitems(request):
 
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
-            storeitems = storeitems.filter(queries)
+            store = store.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
-    current_category = request.GET.get('category', 'StoreItem')
+    current_category = request.GET.get('category', 'Store')
 
     context = {
-        'storeitems': storeitems,
+        'store': store,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -64,12 +65,12 @@ def all_storeitems(request):
     return render(request, 'store/store.html', context)
 
 
-def storeitem_detail(request, store_id):
+def storeitem_detail(request, storeitem_id):
     """ A view to show individual store details """
 
-    storeitem = get_object_or_404(StoreItem, pk=store_id)
+    storeitem = get_object_or_404(StoreItem, pk=storeitem_id)
     context = {
         'storeitem': storeitem,
     }
 
-    return render(request, 'storeitem_detail.html', context)
+    return render(request, 'store/storeitem_detail.html', context)
