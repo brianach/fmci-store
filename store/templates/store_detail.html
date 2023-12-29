@@ -41,7 +41,7 @@
                 </p>
                 {% endif %}
                 <p class="mt-3">{{ storeitem.description }}</p>
-                <form class="form" action="{% url 'add_to_cart' store.id %}" method="POST">
+                <form class="form" action="{% url 'add_to_cart' storeitem.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
