@@ -16,7 +16,6 @@ def cart_contents(request):
     for item_id, item_data in cart.items():
         if isinstance(item_data, int):
             storeitem = get_object_or_404(StoreItem, pk=item_id)
-            total += item_data * storeitem.price
             subtotal = quantity * storeitem.price
             cart_total += subtotal
             storeitem_count += item_data
@@ -26,11 +25,10 @@ def cart_contents(request):
                 'storeitem': storeitem,
                 'subtotal': subtotal,
             })
-
+            print("subtotal =", subtotal)
         else:
             storeitem = get_object_or_404(StoreItem, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
-                total += quantity * storeitem.price
                 subtotal = quantity * storeitem.price
                 cart_total += subtotal
                 storeitem_count += quantity
@@ -43,12 +41,11 @@ def cart_contents(request):
                 })
 
     delivery = 0
-    print("total =", total)
-    grand_total = delivery + total
+
+    grand_total = delivery + cart_total
 
     context = {
         'cart_items': cart_items,
-        'total': total,
         'storeitem_count': storeitem_count,
         'cart_total': cart_total,
         'delivery': delivery,
