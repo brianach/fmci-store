@@ -26,6 +26,7 @@ class StoreItem(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
+    size_option = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_one = models.ImageField(null=True, blank=True)
     image_two = models.ImageField(null=True, blank=True)

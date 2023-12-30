@@ -113,8 +113,15 @@ body {
     z-index: 99;
 }
 
+/* fix image height to ensure transition images render correctly */
 .image-container {
     height: 420px;
+    object-fit: scale-down;
+}
+
+/* set image height to adjust automatically */
+.cart-image-container {
+    height: auto;
     object-fit: scale-down;
 }
 
@@ -128,7 +135,7 @@ body {
     display: none;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: inherit;
     left: 0;
     z-index: 99;
 }
@@ -136,6 +143,12 @@ body {
 .image-container:hover .image-two {
     background-color: #f2f2f2;
     display: inline;
+    height: 420px;
+    object-fit: scale-down;
+}
+
+.cart-heading-table {
+    vertical-align: middle !important;
 }
 
 .btt-button {
@@ -149,6 +162,7 @@ body {
 .btt-link {
     cursor: pointer;
 }
+
 
 /* Media Queries */
 

@@ -10,39 +10,42 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+    <div class="overlay store-back-color"></div>
     <div class="container mb-2">
         <div class="row">
             <div class="col">
-                <hr>
-                <h2 class="text-white capitalize-text mb-4">Shopping Cart</h2>
-                <hr>
+            <hr>
+            <table class="table table-sm table-borderless">
+                <thead class="text-black">
+                    <tr>
+                        <th scope="col">
+                        <h2>Shopping Cart</h2>
+                        </th>                                    
+                        <th class='cart-heading-table' scope="col">Price</th>
+                        <th class='cart-heading-table' scope="col">Quantity</th>
+                        <th class='cart-heading-table' scope="col">Subtotal</th>
+                    </tr>
+                </thead>
+            </table
+            ><hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
                 {% if cart_items %}
+
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
-                            <thead class="text-white">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
-
                             {% for item in cart_items %}
-                                <tr class="text-white">
+                                <tr class="text-black">
                                     <td class="p-3 w-25">
-                                        <img class="card-img-top image-container img-fluid" src="{{ item.storeitem.image_one.url }}"
+                                        <img class="card-img-top cart-image-container img-fluid" src="{{ item.storeitem.image_one.url }}"
                                             alt="{{ item.storeitem.name }}">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.storeitem.name }}</strong></p>
+                                        <p class="my-0"><strong>Size: </strong>{% if item.storeitem.size_option %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.storeitem.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
@@ -52,20 +55,20 @@
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.storeitem.price }}</p>
+                                        <p class="my-0">${{ item.subtotal }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
-                                <td colspan="5" class="pt-5 text-white text-right">
-                                    <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
+                                <td colspan="5" class="pt-5 text-black text-right">
+                                    <h6><strong>Cart Total: ${{ cart_total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
 
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-white text-right">
+                                <td colspan="5" class="text-black text-right">
                                     <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>

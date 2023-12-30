@@ -8,29 +8,49 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
+    subtotal = 0
+    cart_total = 0
     storeitem_count = 0
     cart = request.session.get('cart', {})
-    print(cart)
 
-    for item_id, quantity in cart.items():
-        storeitem = get_object_or_404(StoreItem, pk=item_id)
-        print(storeitem)
-        total += quantity * storeitem.price
-        storeitem_count += quantity
-        cart_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'storeitem': storeitem,
-        })
+    for item_id, item_data in cart.items():
+        if isinstance(item_data, int):
+            storeitem = get_object_or_404(StoreItem, pk=item_id)
+            total += item_data * storeitem.price
+            subtotal = quantity * storeitem.price
+            cart_total += subtotal
+            storeitem_count += item_data
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'storeitem': storeitem,
+                'subtotal': subtotal,
+            })
+
+        else:
+            storeitem = get_object_or_404(StoreItem, pk=item_id)
+            for size, quantity in item_data['items_by_size'].items():
+                total += quantity * storeitem.price
+                subtotal = quantity * storeitem.price
+                cart_total += subtotal
+                storeitem_count += quantity
+                cart_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'storeitem': storeitem,
+                    'size': size,
+                    'subtotal': subtotal,
+                })
 
     delivery = 0
-
+    print("total =", total)
     grand_total = delivery + total
 
     context = {
         'cart_items': cart_items,
         'total': total,
         'storeitem_count': storeitem_count,
+        'cart_total': cart_total,
         'delivery': delivery,
         'grand_total': grand_total,
     }

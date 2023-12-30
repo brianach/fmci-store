@@ -17,14 +17,14 @@
             <div class="image-container my-5">
                 {% if storeitem.image_one %}
                 <a href="{{ storeitem.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ storeitem.image_one.url }}" alt="{{ storeitem.name }}">
+                    <img class="card-img-top image-container img-fluid" src="{{ storeitem.image_one.url }}" alt="{{ storeitem.name }}">
                     {% if storeitem.image_two %}
-                    <img class="card-img-top image-two" src="{{ storeitem.image_two.url }}" alt="{{ storeitem.name }}">
+                    <img class="card-img-top image-container image-two" src="{{ storeitem.image_two.url }}" alt="{{ storeitem.name }}">
                     {% endif %}
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ storeitem.name }}">
+                    <img class="card-img-top image-container img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ storeitem.name }}">
                 </a>
                 {% endif %}
             </div>
@@ -44,16 +44,30 @@
                 <form class="form" action="{% url 'add_to_cart' storeitem.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
+                        {% with storeitem.size_option as s %}
+                        {{ storeitem }}
+                        {% if s %}
+                            <div class="col-12">
+                                <p><strong>Size:</strong></p>
+                                <select class="form-control rounded-0 w-50" name="storeitem_size" id='id_storeitem_size'>
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m" selected>M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                            </div>
+                        {% endif %}
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ store.id }}" id="id_qty_{{ store.id }}">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ storeitem.id }}" id="id_qty_{{ storeitem.id }}">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -63,6 +77,7 @@
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        {% endwith %}
                     </div>
                 </form>
             </div>
