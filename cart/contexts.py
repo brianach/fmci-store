@@ -14,7 +14,7 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for item_id, item_data in cart.items():
-        print(item_id, item_data,)
+
         if isinstance(item_data, int):
             storeitem = get_object_or_404(StoreItem, pk=item_id)
             quantity = item_data
