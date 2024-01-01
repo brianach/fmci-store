@@ -53,7 +53,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted"><i class="fa-solid fa-euro-sign"></i>{{ item.storeitem.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted"><i class="fa-solid fa-euro-sign">&nbsp</i>{{ item.storeitem.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -65,9 +65,9 @@
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0"><i class="fa-solid fa-euro-sign"></i>{{ cart_total | floatformat:2 }}</p>
-                        <p class="my-0"><i class="fa-solid fa-euro-sign"></i>{{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong><i class="fa-solid fa-euro-sign"></i>{{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0"><i class="fa-solid fa-euro-sign">&nbsp</i>{{ cart_total | floatformat:2 }}</p>
+                        <p class="my-0"><i class="fa-solid fa-euro-sign">&nbsp</i>{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong><i class="fa-solid fa-euro-sign">&nbsp</i>{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
@@ -116,11 +116,14 @@
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust cart</span>
+                            <span>
+                                <i class="fas fa-shopping-cart "></i>
+                            </span>
 						</a>
 						<button id="submit-button" class="btn btn-black rounded-0">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
-								<i class="fas fa-credit-card"></i>
+								<i class="fas fa-credit-card motion-color"></i>
 							</span>
 						</button>
 						<p class="small text-danger my-0">
