@@ -51,7 +51,7 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.storeitem.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.storeitem.price }}</p>
+                                        <p class="my-0"><i class="fa-solid fa-euro-sign"></i> {{ item.storeitem.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
@@ -90,21 +90,21 @@
                                     
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.subtotal }}</p>
+                                        <p class="my-0"><i class="fa-solid fa-euro-sign"></i> {{ item.subtotal }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-black text-right">
-                                    <h6><strong>Cart Total: ${{ cart_total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6><strong>Cart Total: <i class="fa-solid fa-euro-sign">&nbsp</i>{{ cart_total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: <i class="fa-solid fa-euro-sign">&nbsp</i>{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: <i class="fa-solid fa-euro-sign">&nbsp</i>{{ grand_total|floatformat:2 }}</strong></h4>
 
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-black text-right">
-                                    <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'store' %}" class="btn btn-outline-black rounded-0 btn-lg notice-back">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
@@ -113,7 +113,7 @@
                                     <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-white text-uppercase">Secure Checkout</span>
                                         <span class="icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fas fa-credit-card"></i>
                                         </span>
                                     </a>
                                 </td>

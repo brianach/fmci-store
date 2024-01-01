@@ -80,9 +80,16 @@
             </div>
 
             <div class="col m-auto px-4">
-                <div class="text-center text-white float-right">
-                    <a href="{% url 'view_cart' %}">
+                <div class="text-center float-right">
+                    <a class="motion-logo-color" href="{% url 'view_cart' %}">
                     <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                                <i class="fa-solid fa-euro-sign"></i> {{ grand_total|floatformat:2 }}
+                            {% else %}
+                                <i class="fa-solid fa-euro-sign"></i> 0.00
+                            {% endif %}
+                        </p>
                     </a>
                 </div>
             </div>
@@ -90,8 +97,8 @@
         </div>
 
         <div id="info-banner" class="row text-center">
-            <div class="col event-banner text-black">
-                <h4 class="logo-font my-1">Don't forget to book your place for Future Motion 24 !</h4>
+            <div class="col event-banner text-black notice-back">
+                <h4 class="logo-font my-1">Don't forget to book your place for Future Mobility 24 !</h4>
             </div>
         </div>
     </header>
