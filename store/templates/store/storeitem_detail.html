@@ -44,7 +44,7 @@
                 <form class="form" action="{% url 'add_to_cart' storeitem.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
-                        {% with storeitem.size_option as s %}
+                        {% with storeitem. as s %}
                         {% if s %}
                             <div class="col-12">
                                 <p><strong>Size:</strong></p>

@@ -1,11 +1,12 @@
 [
     {
         "pk": 1,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi001",
             "name": "Baseball Cap",
             "description": "Snapback retro design baseball cap with two color peak. Size adjustment at back. 100% polyester",
+            "size_option": "True",
             "price": 14.99,
             "category": 1,
             "image_one": "baseball-frn.webp",
@@ -14,11 +15,12 @@
     },
     {
         "pk": 2,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi002",
             "name": "Beanie",
             "description": "Classic casual organic fisherman beanie from Stanley/Stella. Sturdy rib knit. Four structural seams on top. Single, simple turn-up Material: 95% organic cotton, 5% elastane",
+            "size_option": "True",
             "price": 9.99,
             "category": 1,
             "image_one": "beanie-frn.webp",
@@ -27,11 +29,12 @@
     },
     {
         "pk": 3,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi003",
             "name": "Bucket Hat",
             "description": "Sustainable bucket hat from Stanley/Stella. Outer Layer: 80 % recycled cotton, 20 % recycled polyester; Inner Layer: 100 % cotton (from organic cultivation)",
+            "size_option": "True",
             "price": 14.99,
             "category": 1,
             "image_one": "bucket-hat-frn.webp",
@@ -40,11 +43,12 @@
     },
     {
         "pk": 4,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi004",
             "name": "Mens T-Shirt",
             "description": "Comes highly recommended! Top quality and supreme print results with all print methods. Fabric weight: 150 g/m². Fair and sustainable.",
+            "size_option": "True",
             "price": 14.99,
             "category": 2,
             "image_one": "mens-tee-frn.webp",
@@ -53,11 +57,12 @@
     },
     {
         "pk": 5,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi005",
             "name": "Womens T-Shirt",
             "description": "Comes highly recommended! Top quality and supreme print results with all print methods. Fabric weight: 150 g/m². Fair and sustainable.",
+            "size_option": "True",
             "price": 14.99,
             "category": 2,
             "image_one": "womens-tee-frn.webp",
@@ -66,11 +71,12 @@
     },
     {
         "pk": 6,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi006",
             "name": "Hoodie",
             "description": "Premium comfortable hoodie. Inner pocket and a small loop on the hood to serve as a hook for handy headphones attachment. Durable quality: 280 g/m². Material: 80% cotton, 20% polyester",
+            "size_option": "True",
             "price": 24.99,
             "category": 2,
             "image_one": "hoodie-front.webp",
@@ -79,7 +85,7 @@
     },
     {
         "pk": 7,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi007",
             "name": "Adult Backpack",
@@ -92,7 +98,7 @@
     },
     {
         "pk": 8,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi008",
             "name": "Childs Backpack",
@@ -105,7 +111,7 @@
     },
     {
         "pk": 9,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi009",
             "name": "Umbrella",
@@ -118,7 +124,7 @@
     },
     {
         "pk": 10,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi010",
             "name": "Tote",
@@ -131,7 +137,7 @@
     },
     {
         "pk": 11,
-        "model": "store.store",
+        "model": "store.storeitem",
         "fields": {
             "sku": "fmi010",
             "name": "Mug",

@@ -39,6 +39,7 @@ def checkout(request):
                             order=order,
                             storeitem=storeitem,
                             quantity=item_data,
+                            storeitem_size=size,
                         )
                         order_line_item.save()
                     else:
@@ -47,7 +48,6 @@ def checkout(request):
                                 order=order,
                                 storeitem=storeitem,
                                 quantity=quantity,
-                                storeitem_size=size,
                             )
                             order_line_item.save()
                 except StoreItem.DoesNotExist:
