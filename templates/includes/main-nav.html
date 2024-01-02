@@ -1,56 +1,88 @@
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
+  <ul class="navbar-nav w-auto mx-auto">
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link text-white mr-1.5"
+        href="#"
+        id="store-link"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Store
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="store-link">
+        <a href="{% url 'store' %}?category=headwear" class="dropdown-item"
+          >Headwear</a
+        >
+        <a href="{% url 'store' %}?category=clothing" class="dropdown-item"
+          >Clothing</a
+        >
+        <a href="{% url 'store' %}?category=accessories" class="dropdown-item"
+          >Accessories</a
+        >
+        <a href="{% url 'store' %}" class="dropdown-item">Everything</a>
+      </div>
+    </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link text-white mr-1.5" href="#" id="store-link" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Store
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="store-link">
-                <a href="{% url 'store' %}?category=headwear" class="dropdown-item">Headwear</a>
-                <a href="{% url 'store' %}?category=clothing" class="dropdown-item">Clothing</a>
-                <a href="{% url 'store' %}?category=accessories" class="dropdown-item">Accessories</a>
-            </div>
-        </li>
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link text-white mr-1.5"
+        href="#"
+        id="services-link"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Services
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="services-link">
+        <a href="" class="dropdown-item">Digital Twin</a>
+        <a href="" class="dropdown-item">Compute Containers</a>
+      </div>
+    </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link text-white mr-1.5" href="#" id="services-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Services
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="services-link">
-                <a href="" class="dropdown-item">Digital Twin</a>
-                <a href="" class="dropdown-item">Compute Containers</a>
-            </div>
-        </li>
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link text-white"
+        href="#"
+        id="misc-link"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Workspaces
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="misc-link">
+        <a href="" class="dropdown-item">Labspace</a>
+        <a href="" class="dropdown-item">Deskspace</a>
+      </div>
+    </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link text-white" href="#" id="misc-link" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Workspaces
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="misc-link">
-                <a href="" class="dropdown-item">Labspace</a>
-                <a href="" class="dropdown-item">Deskspace</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Account
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                <a href="" class="dropdown-item">StoreItem Management</a>
-                {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
-            </div>
-        </li>   
-    </ul>
+    <li class="nav-item dropdown">
+      <a
+        class="text-white nav-link"
+        href="#"
+        id="user-options"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Account
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        <!-- prettier-ignore -->
+        {% if request.user.is_authenticated %}
+        {% if request.user.is_superuser%}
+        <a href="" class="dropdown-item">StoreItem Management</a>
+        {% endif %}
+        <a href="" class="dropdown-item">My Profile</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        {% else %}
+        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+        {% endif %}
+      </div>
+    </li>
+  </ul>
 </div>

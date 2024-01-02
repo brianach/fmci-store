@@ -43,7 +43,10 @@ def add_to_cart(request, item_id):
 def adjust_cart(request, item_id):
     """Adjust the quantity of the specified item """
 
-    quantity = int(request.POST.get('quantity'))
+    quantity_raw = request.POST.get('quantity')
+    quantity = int(
+        quantity_raw) if quantity_raw and quantity_raw.isdigit() else 0
+    # quantity = int(request.POST.get('quantity'))
     size = None
     if 'storeitem_size' in request.POST:
         size = request.POST['storeitem_size']
