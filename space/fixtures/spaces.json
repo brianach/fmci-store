@@ -8,7 +8,7 @@
         }
     },
     {
-        "pk": 12,
+        "pk": 2,
         "model": "space.space",
         "fields": {
             "name": "labspace",

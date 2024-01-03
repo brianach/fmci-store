@@ -4,27 +4,41 @@
         "model": "space.deskspace",
         "fields": {
             "space": 1,
+            "sku": "spcdsk001",
+            "name": "Single Desk",
+            "description": "One desk in a shared office space",
+            "price_a": 40.00,
+            "price_b": 150.00,
+            "price_c": 370.00,
+            "price_d": 3500.00
+        }
+    },
+    {
+        "pk": 2,
+        "model": "space.deskspace",
+        "fields": {
+            "space": 1,
+            "sku": "spcdsk002",
+            "name": "Three Desks",
+            "description": "Three desks in a shared office space",
+            "price_a": 60.00,
+            "price_b": 200.00,
+            "price_c": 700.00,
+            "price_d": 7000.00
+        }
+    },
+    {
+        "pk": 3,
+        "model": "space.deskspace",
+        "fields": {
+            "space": 1,
             "sku": "spcdsk003",
-            "name": "Private Unit",
-            "description": "Private Office Space",
-            "pricing": [
-                [
-                    "a",
-                    null
-                ],
-                [
-                    "b",
-                    null
-                ],
-                [
-                    "c",
-                    null
-                ],
-                [
-                    "d",
-                    null
-                ]
-            ]
+            "name": "Private Office",
+            "description": "A private unshared office with conferencing equipment",
+            "price_a": 250.00,
+            "price_b": 1000.00,
+            "price_c": 3000.00,
+            "price_d": 25000.00
         }
     }
 ]

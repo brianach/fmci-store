@@ -11,33 +11,17 @@ class SpaceAdmin(admin.ModelAdmin):
     )
 
 
-class PricingMixin:
-    def pricing(self, obj):
-        # Assuming 'termprices' is a JSONField
-        pricing_info = obj.termprices
-
-        # Define keys and default value
-        keys = ['a', 'b', 'c', 'd']
-        default_value = None
-
-        # Create a list to store values for each key
-        pricing_columns = [pricing_info.get(
-            key, default_value) for key in keys]
-
-        # Convert the list to a string
-        pricing_string = ', '.join(str(column) for column in pricing_columns)
-
-        return pricing_string
-
-    pricing.short_description = 'Pricing'
+class BasespaceAdmin(admin.ModelAdmin):
+    list_display = ('sku', 'name', 'description', 'price_a',
+                    'price_b', 'price_c', 'price_d')
 
 
-class LabspaceAdmin(PricingMixin, admin.ModelAdmin):
-    list_display = ('sku', 'name', 'pricing')
+class LabspaceAdmin(BasespaceAdmin):
+    pass
 
 
-class DeskspaceAdmin(PricingMixin, admin.ModelAdmin):
-    list_display = ('sku', 'name', 'pricing')
+class DeskspaceAdmin(BasespaceAdmin):
+    pass
 
 
 admin.site.register(Space, SpaceAdmin)

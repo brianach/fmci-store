@@ -1,0 +1,44 @@
+[
+    {
+        "pk": 1,
+        "model": "space.labspace",
+        "fields": {
+            "space": 2,
+            "sku": "spclab001",
+            "name": "Single Labdesk",
+            "description": "One labdesk in a shared lab space",
+            "price_a": 0.00,
+            "price_b": 500.00,
+            "price_c": 1000.00,
+            "price_d": 3500.00
+        }
+    },
+    {
+        "pk": 2,
+        "model": "space.labspace",
+        "fields": {
+            "space": 2,
+            "sku": "spclab002",
+            "name": "Three Labdesks",
+            "description": "Three labdesks in a shared lab space",
+            "price_a": 0.00,
+            "price_b": 2000.00,
+            "price_c": 5000.00,
+            "price_d": 15000.00
+        }
+    },
+    {
+        "pk": 3,
+        "model": "space.labspace",
+        "fields": {
+            "space": 2,
+            "sku": "spclab003",
+            "name": "Private Lab",
+            "description": "A private unshared lab",
+            "price_a": 0.00,
+            "price_b": 2500.00,
+            "price_c": 10000.00,
+            "price_d": 30000.00
+        }
+    }
+]
