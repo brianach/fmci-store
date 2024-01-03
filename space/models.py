@@ -24,9 +24,7 @@ class BaseSpace(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    # termprices = models.TupleField(base_field=models.TupleField(
-    #    base_field=models.CharField(max_length=20)))
-    termprices = models.JSONField()
+    pricing = models.JSONField()
 
     class Meta:
         abstract = True

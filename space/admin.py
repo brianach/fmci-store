@@ -5,38 +5,39 @@ from .models import Labspace, Deskspace, Space
 
 
 class SpaceAdmin(admin.ModelAdmin):
-    list_display = ('friendly_name', 'name',)
+    list_display = (
+        'friendly_name',
+        'name',
+    )
 
 
 class PricingMixin:
-    def get_pricing_columns(self, obj):
-        # Assuming 'pricing' is a JSONField
-        pricing_info = obj.pricing
+    def pricing(self, obj):
+        # Assuming 'termprices' is a JSONField
+        pricing_info = obj.termprices
 
         # Define keys and default value
         keys = ['a', 'b', 'c', 'd']
         default_value = None
 
         # Create a list to store values for each key
-        pricing_columns = []
+        pricing_columns = [pricing_info.get(
+            key, default_value) for key in keys]
 
-        for key in keys:
-            pricing_columns.append(pricing_info.get(key, default_value))
+        # Convert the list to a string
+        pricing_string = ', '.join(str(column) for column in pricing_columns)
 
-        return pricing_columns
+        return pricing_string
 
-    def display_pricing(self, obj):
-        return self.get_pricing_columns(obj)
-
-    display_pricing.short_description = 'Pricing'
+    pricing.short_description = 'Pricing'
 
 
 class LabspaceAdmin(PricingMixin, admin.ModelAdmin):
-    list_display = ('sku', 'name', 'display_pricing')
+    list_display = ('sku', 'name', 'pricing')
 
 
 class DeskspaceAdmin(PricingMixin, admin.ModelAdmin):
-    list_display = ('sku', 'name', 'display_pricing')
+    list_display = ('sku', 'name', 'pricing')
 
 
 admin.site.register(Space, SpaceAdmin)
