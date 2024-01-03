@@ -18,25 +18,23 @@ class Space(models.Model):
         return self.friendly_name
 
 
-class Labspace(models.Model):
+class BaseSpace(models.Model):
     space = models.ForeignKey(
         'Space', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    term = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.TextField()
+    # termprices = models.TupleField(base_field=models.TupleField(
+    #    base_field=models.CharField(max_length=20)))
+    termprices = models.JSONField()
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        abstract = True
 
 
-class Deskspace(models.Model):
-    space = models.ForeignKey(
-        'Space', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    term = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+class Labspace(BaseSpace):
+    pass
 
-    def __str__(self):
-        return self.name
+
+class Deskspace(BaseSpace):
+    pass
