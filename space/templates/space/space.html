@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+
+<div class="overlay store-back-color"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col text-center mt-3">
+      <h2 class="logo-font">Spaces</h2>
+      <hr class="w-50 mb-1" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="store-container col-10 offset-1">
+      <div class="row mt-1 mb-2"></div>
+      <div class="row">
+        {% for space in spaces %}
+        <div class="col-sm-6">
+          <!---->
+          <div class="card h-100 border-0 store-back-color">
+            <div class="image-container">
+              <a href="">
+                <img
+                  class="card-img-top image-container img-fluid"
+                  src=""
+                  alt=""
+                />
+              </a>
+              <a href="">
+                <img
+                  class="card-img-top img-fluid"
+                  src="{{ MEDIA_URL }}noimage.png"
+                  alt="{{ storeitem.name }}"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card-body pb-0">
+            <p class="mb-0">{{ space.name }}</p>
+          </div>
+          <div class="card-footer pt-0 border-0 text-left">
+            <div class="row">
+              <div class="col">
+                <p
+                  class="lead mb-0 text-left font-weight-bold store-back-color"
+                >
+                  <i class="fa-solid fa-euro-sign">&nbsp</i>{{ space.price }}
+                </p>
+                {% if space.space %}
+                <p class="small mt-1 mb-0">
+                  <a
+                    class="text-muted"
+                    href="{% url 'space' %}?space={{ space.space.name }}"
+                  >
+                    <i class="fas fa-tags mr-1"></i>
+                    <!-- prettier-ignore -->
+                    {{space.space.friendly_name }}
+                  </a>
+                </p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+          <hr />
+        </div>
+        {% endif %} {% if forloop.counter|divisibleby:3 %}
+        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+          <hr />
+        </div>
+        {% endif %} {% if forloop.counter|divisibleby:4 %}
+        <div class="col-12 d-none d-xl-block mb-5">
+          <hr />
+        </div>
+        {% endif %} {% endfor %}-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="btt-button shadow-sm rounded-0 border border-black">
+  <a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+  </a>
+</div>
+{% endblock %}

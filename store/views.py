@@ -74,3 +74,4 @@ def storeitem_detail(request, storeitem_id):
     }
 
     return render(request, 'store/storeitem_detail.html', context)
+
