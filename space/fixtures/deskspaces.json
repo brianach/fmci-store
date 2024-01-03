@@ -1,0 +1,32 @@
+[
+    {
+        "pk": 1,
+        "model": "space.deskspace",
+        "fields": {
+            "space": 1,
+            "sku": "spcdsk001",
+            "name": "Single Desk",
+            "description": "1 Desk in Shared Office Space",
+        }
+    },
+    {
+        "pk": 2,
+        "model": "space.deskspace",
+        "fields": {
+            "space": 1,
+            "sku": "spcdsk002",
+            "name": "Three Desks",
+            "description": "3 Desks in Shared Office Space",
+        }
+    },
+    {
+        "pk": 2,
+        "model": "space.deskspace",
+        "fields": {
+            "space": 1,
+            "sku": "spcdsk003",
+            "name": "Private Office",
+            "description": "Private Office Space",
+        }
+    }
+]
