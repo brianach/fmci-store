@@ -1,47 +1,152 @@
-{% extends "base.html" %} {% load static %} {% block page_header %}
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block banner_text %}Email info@fmci.ie for booking details{% endblock %}
+{% load static %}
+
+{% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %}
 
-<div class="overlay space-back-color"></div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col text-center mt-3">
-      <h2 class="logo-font">Spaces</h2>
-      <hr class="w-50 mb-1" />
-    </div>
-  </div>
+<!-- prettier-ignore -->
+{% block content %}
 
-  <div class="row">
-    <div class="col">
-      <div class="image-container my-5">
-        {% if space.image_one %}
-        <a href="{{ space.image.url }}" target="_blank">
-          <img
-            class="card-img-top image-container img-fluid"
-            src="{{ spaceitem.image_one.url }}"
-            alt="{{ spaceitem.name }}"
-          />
-        </a>
-        {% else %}
-        <a href="">
-          <img
-            class="card-img-top image-container img-fluid"
-            src="{{ MEDIA_URL }}noimage.png"
-            alt="{{ spaceitem.name }}"
-          />
-        </a>
-        {% endif %}
+<div class="overlay store-back-color"></div>
+<div class="space-container" style="margin: 5%">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center mt-3">
+        <h2 class="logo-font">Workspaces</h2>
+        <hr class="w-50 mb-1" />
       </div>
     </div>
-    <div class="col">Office Space</div>
-  </div>
-  <div class="row">
-    <div class="col">Lab Space</div>
-  </div>
 
-  {% endblock %}
+    <div class="row">
+      <div class="col">
+        <div class="image-container my-5">
+          {% if spaces.0.image %}
+          <a href="{{ spaces.0.image.url }}" target="_blank">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ spaces.0.image.url }}"
+              alt="{{ spaces.0.name }}"
+            />
+          </a>
+          {% else %}
+          <a href="">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ MEDIA_URL }}noimage.png"
+              alt="{{ spaces.0.name }}"
+            />
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col">
+        <div class="container desk-table">
+          <span><h3>{{ spaces.0.friendly_name }}</h3></span>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">{{ deskspaces.0.name }}</th>
+                <th scope="col">{{ deskspaces.1.name }}</th>
+                <th scope="col">{{ deskspaces.2.name }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ spaces.0.term_a }}</th>
+                <td>{{ deskspaces.0.price_a }}</td>
+                <td>{{ deskspaces.1.price_a }}</td>
+                <td>{{ deskspaces.2.price_a }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ spaces.0.term_b }}</th>
+                <td>{{ deskspaces.0.price_b }}</td>
+                <td>{{ deskspaces.1.price_b }}</td>
+                <td>{{ deskspaces.2.price_b }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ spaces.0.term_c }}</th>
+                <td>{{ deskspaces.0.price_c }}</td>
+                <td>{{ deskspaces.1.price_c }}</td>
+                <td>{{ deskspaces.2.price_c }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ spaces.0.term_d }}</th>
+                <td>{{ deskspaces.0.price_d }}</td>
+                <td>{{ deskspaces.2.price_d }}</td>
+                <td>{{ deskspaces.2.price_d }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="image-container my-5">
+          {% if spaces.1.image %}
+          <a href="{{ spaces.1.image.url }}" target="_blank">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ spaces.1.image.url }}"
+              alt="{{ spaces.1.name }}"
+            />
+          </a>
+          {% else %}
+          <a href="">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ MEDIA_URL }}noimage.png"
+              alt="{{ spaces.1.name }}"
+            />
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col">
+        <div class="container desk-table">
+          <span><h3>{{ spaces.1.friendly_name }}</h3></span>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">{{ labspaces.0.name }}</th>
+                <th scope="col">{{ labspaces.1.name }}</th>
+                <th scope="col">{{ labspaces.2.name }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ spaces.1.term_b }}</th>
+                <td>{{ labspaces.0.price_b }}</td>
+                <td>{{ labspaces.1.price_b }}</td>
+                <td>{{ labspaces.2.price_b }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ spaces.1.term_c }}</th>
+                <td>{{ labspaces.0.price_c }}</td>
+                <td>{{ labspaces.1.price_c }}</td>
+                <td>{{ labspaces.2.price_c }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ spaces.1.term_d }}</th>
+                <td>{{ labspaces.0.price_d }}</td>
+                <td>{{ labspaces.2.price_d }}</td>
+                <td>{{ labspaces.2.price_d }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+{% endblock %}

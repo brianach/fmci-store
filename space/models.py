@@ -5,11 +5,14 @@ from django.db import models
 
 class Space(models.Model):
 
-    class Meta:
-        verbose_name_plural = 'Spaces'
-
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    term_a = models.CharField(max_length=8, null=True, blank=True)
+    term_b = models.CharField(max_length=8, null=True, blank=True)
+    term_c = models.CharField(max_length=8, null=True, blank=True)
+    term_d = models.CharField(max_length=8, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -25,10 +28,10 @@ class BaseSpace(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
 
-    for letter in ['a', 'b', 'c', 'd']:
-        field_name = f'price_{letter}'
-        locals()[field_name] = models.DecimalField(
-            max_digits=10, decimal_places=2)
+    price_a = models.DecimalField(max_digits=10, decimal_places=2)
+    price_b = models.DecimalField(max_digits=10, decimal_places=2)
+    price_c = models.DecimalField(max_digits=10, decimal_places=2)
+    price_d = models.DecimalField(max_digits=10, decimal_places=2)
 
     class Meta:
         abstract = True

@@ -4,7 +4,12 @@
         "model": "space.space",
         "fields": {
             "name": "deskspace",
-            "friendly_name": "Deskspace"
+            "friendly_name": "Deskspace",
+            "image": "deskspace.webp",
+            "term_a": "day",
+            "term_b": "week",
+            "term_c": "month",
+            "term_d": "year"
         }
     },
     {
@@ -12,7 +17,12 @@
         "model": "space.space",
         "fields": {
             "name": "labspace",
-            "friendly_name": "Labspace"
+            "friendly_name": "Labspace",
+            "image": "labspace.webp",
+            "term_a": "n/a",
+            "term_b": "month",
+            "term_c": "quarter",
+            "term_d": "year"
         }
     }
 ]

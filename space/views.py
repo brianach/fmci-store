@@ -7,4 +7,8 @@ def spaces(request):
     deskspaces = Deskspace.objects.all()
     labspaces = Labspace.objects.all()
 
-    return render(request, 'space/space.html', {'spaces': spaces})
+    return render(request, 'space/space.html', {
+        'spaces': spaces,
+        'deskspaces': deskspaces,
+        'labspaces': labspaces, }
+    )

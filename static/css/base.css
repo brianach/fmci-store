@@ -177,7 +177,30 @@ body {
     color: #086877;
 }
 
+.desk-table {
+    margin-top: 15%;
+    text-align: center;
+}
+
 /* Media Queries */
+
+/* On screens that are 1200px or less, set the background color to blue */
+@media screen and (max-width: 1200px) {
+    .desk-table {
+        margin-top: 20%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .desk-table {
+        text-align: center;
+    }
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 980px) {
@@ -196,7 +219,7 @@ body {
         z-index: 1030;
     }
 
-    .header-container {
+    /*.header-container {
         padding-top: 164px;
-    }
+    }*/
 }
