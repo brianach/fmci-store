@@ -1,0 +1,152 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block banner_text %}Onsite Only. Email info@fmci.ie for booking details{% endblock %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block content %}
+
+<div class="overlay store-back-color"></div>
+<div class="service-container" style="margin: 5%">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center mt-3">
+        <h2 class="logo-font">Workservices</h2>
+        <hr class="w-50 mb-1" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="image-container my-5">
+          {% if services.0.image %}
+          <a href="{{ services.0.image.url }}" target="_blank">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ services.0.image.url }}"
+              alt="{{ services.0.name }}"
+            />
+          </a>
+          {% else %}
+          <a href="">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ MEDIA_URL }}noimage.png"
+              alt="{{ services.0.name }}"
+            />
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col">
+        <div class="container digital-table">
+          <span><h3>{{ services.0.friendly_name }}</h3></span>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">{{ digitalservices.0.name }}</th>
+                <th scope="col">{{ digitalservices.1.name }}</th>
+                <th scope="col">{{ digitalservices.2.name }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ services.0.term_a }}</th>
+                <td>{{ digitalservices.0.tier_a }}</td>
+                <td>{{ digitalservices.1.tier_a }}</td>
+                <td>{{ digitalservices.2.tier_a }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ services.0.term_b }}</th>
+                <td>{{ digitalservices.0.tier_b }}</td>
+                <td>{{ digitalservices.1.tier_b }}</td>
+                <td>{{ digitalservices.2.tier_b }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ services.0.term_c }}</th>
+                <td>{{ digitalservices.0.tier_c }}</td>
+                <td>{{ digitalservices.1.tier_c }}</td>
+                <td>{{ digitalservices.2.tier_c }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ services.0.term_d }}</th>
+                <td>{{ digitalservices.0.tier_d }}</td>
+                <td>{{ digitalservices.2.tier_d }}</td>
+                <td>{{ digitalservices.2.tier_d }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="image-container my-5">
+          {% if services.1.image %}
+          <a href="{{ services.1.image.url }}" target="_blank">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ services.1.image.url }}"
+              alt="{{ services.1.name }}"
+            />
+          </a>
+          {% else %}
+          <a href="">
+            <img
+              class="card-img-top image-container img-fluid"
+              src="{{ MEDIA_URL }}noimage.png"
+              alt="{{ services.1.name }}"
+            />
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col">
+        <div class="container digital-table">
+          <span><h3>{{ services.1.friendly_name }}</h3></span>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">{{ computeservices.0.name }}</th>
+                <th scope="col">{{ computeservices.1.name }}</th>
+                <th scope="col">{{ computeservices.2.name }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ services.1.term_b }}</th>
+                <td>{{ computeservices.0.tier_b }}</td>
+                <td>{{ computeservices.1.tier_b }}</td>
+                <td>{{ computeservices.2.tier_b }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ services.1.term_c }}</th>
+                <td>{{ computeservices.0.tier_c }}</td>
+                <td>{{ computeservices.1.tier_c }}</td>
+                <td>{{ computeservices.2.tier_c }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ services.1.term_d }}</th>
+                <td>{{ computeservices.0.tier_d }}</td>
+                <td>{{ computeservices.2.tier_d }}</td>
+                <td>{{ computeservices.2.tier_d }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -25,24 +25,7 @@
       </div>
     </li>
 
-    <li class="nav-item dropdown">
-      <a
-        class="nav-link text-white mr-1.5"
-        href="#"
-        id="services-link"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Services
-      </a>
-      <div class="dropdown-menu border-0" aria-labelledby="services-link">
-        <a href="" class="dropdown-item">Digital Twin</a>
-        <a href="" class="dropdown-item">Compute Containers</a>
-      </div>
-    </li>
-
-    <li class="nav-item dropdown">
+    <li class="nav-item link">
       <a
         class="nav-link text-white"
         href="{% url 'space' %}"
@@ -51,6 +34,18 @@
         aria-expanded="false"
       >
         Workspaces
+      </a>
+    </li>
+
+    <li class="nav-item link">
+      <a
+        class="nav-link text-white"
+        href="{% url 'service' %}"
+        id="misc-link"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Services
       </a>
     </li>
 

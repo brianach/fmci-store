@@ -1,0 +1,28 @@
+[
+    {
+        "pk": 1,
+        "model": "service.service",
+        "fields": {
+            "name": "compute",
+            "friendly_name": "Compute Container",
+            "image": "datacentre.webp",
+            "tier_1": "tier_1",
+            "tier_2": "tier_2",
+            "tier_3": "tier_3",
+            "tier_4": "tier_4"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "service.service",
+        "fields": {
+            "name": "digital",
+            "friendly_name": "Digital Twin",
+            "image": "digital.webp",
+            "tier_1": "tier_1",
+            "tier_2": "tier_2",
+            "tier_3": "tier_3",
+            "tier_4": "tier_4"
+        }
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "service.compute",
+        "fields": {
+            "service": 1,
+            "sku": "svccom001",
+            "name": "GPU",
+            "description": "Graphics Processor",
+            "item_1": 2,
+            "item_2": 2,
+            "item_3": 4,
+            "item_4": 4
+        }
+    },
+    {
+        "pk": 2,
+        "model": "service.compute",
+        "fields": {
+            "service": 1,
+            "sku": "svccom002",
+            "name": "CPU",
+            "description": "Compute Processor",
+            "item_1": 16,
+            "item_2": 24,
+            "item_3": 32,
+            "item_4": 40
+        }
+    },
+    {
+        "pk": 3,
+        "model": "service.compute",
+        "fields": {
+            "service": 1,
+            "sku": "svccom003",
+            "name": "RAM",
+            "description": "Total GB Allocation",
+            "item_1": 32,
+            "item_2": 64,
+            "item_3": 96,
+            "item_4": 128
+        }
+    },
+    {
+        "pk": 4,
+        "model": "service.compute",
+        "fields": {
+            "service": 1,
+            "sku": "svccom003",
+            "name": "STB",
+            "description": "Storage in Terabytes",
+            "item_1": 4,
+            "item_2": 8,
+            "item_3": 12,
+            "item_4": 16
+        }
+    }
+]
