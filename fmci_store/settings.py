@@ -29,7 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-brianach-fmcistore-wbhiuv9fc0k.ws-eu107.gitpod.io',
                  'fmci-store-a822ef1f1b5f.herokuapp.com', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -129,9 +128,18 @@ else:
         }
     }
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://gihtbgpx:xTJyVFye8ww-bqgpWJzNegobIJKvHczk@tyke.db.elephantsql.com/gihtbgpx')
-}
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
