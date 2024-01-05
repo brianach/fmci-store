@@ -187,6 +187,15 @@ body {
     text-align: center;
 }
 
+.info-pop {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1;
+  }
+
 /* Media Queries */
 
 /* On screens that are 1200px or less, set the background color to blue */

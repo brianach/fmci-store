@@ -40,6 +40,11 @@ class BaseService(models.Model):
 class Compute(BaseService):
     pass
 
+    class Meta:
+        verbose_name_plural = 'Compute'
 
 class Digital(BaseService):
     pass
+
+    class Meta:
+        verbose_name_plural = 'Digital'

@@ -61,28 +61,40 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">{{ compute.0.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup1')" onmouseout="hidePopup('popup1')">
+                    {{ compute.0.name }}
+                    <div id="popup1" class="info-pop">{{ compute.0.description }}</div>
+                  </th>
                 <td>{{ compute.0.item_1 }}</td>
                 <td>{{ compute.0.item_2 }}</td>
                 <td>{{ compute.0.item_3 }}</td>
                 <td>{{ compute.0.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ compute.1.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup2')" onmouseout="hidePopup('popup2')">
+                    {{ compute.1.name }}
+                    <div id="popup2" class="info-pop">{{ compute.1.description }}</div>
+                  </th>
                 <td>{{ compute.1.item_1 }}</td>
                 <td>{{ compute.1.item_2 }}</td>
                 <td>{{ compute.1.item_3 }}</td>
                 <td>{{ compute.1.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ compute.2.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup3')" onmouseout="hidePopup('popup3')">
+                    {{ compute.2.name }}
+                    <div id="popup3" class="info-pop">{{ compute.2.description }}</div>
+                  </th>
                 <td>{{ compute.2.item_1 }}</td>
                 <td>{{ compute.2.item_2 }}</td>
                 <td>{{ compute.2.item_3 }}</td>
                 <td>{{ compute.2.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ compute.3.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup4')" onmouseout="hidePopup('popup4')">
+                    {{ compute.3.name }}
+                    <div id="popup4" class="info-pop">{{ compute.3.description }}</div>
+                  </th>
                 <td>{{ compute.3.item_1 }}</td>
                 <td>{{ compute.3.item_2 }}</td>
                 <td>{{ compute.3.item_3 }}</td>
@@ -131,21 +143,30 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">{{ digital.0.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup5')" onmouseout="hidePopup('popup5')">
+                    {{ digital.0.name }}
+                    <div id="popup5" class="info-pop">{{ digital.0.description }}</div>
+                  </th>
                 <td>{{ digital.0.item_1 }}</td>
                 <td>{{ digital.0.item_2 }}</td>
                 <td>{{ digital.0.item_3 }}</td>
                 <td>{{ digital.0.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ digital.1.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup6')" onmouseout="hidePopup('popup6')">
+                    {{ digital.1.name }}
+                    <div id="popup6" class="info-pop">{{ digital.1.description }}</div>
+                  </th>
                 <td>{{ digital.1.item_1 }}</td>
                 <td>{{ digital.1.item_2 }}</td>
                 <td>{{ digital.1.item_3 }}</td>
                 <td>{{ digital.1.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ digital.2.name }}</th>
+                <th scope="row" onmouseover="showPopup('popup7')" onmouseout="hidePopup('popup7')">
+                    {{ digital.2.name }}
+                    <div id="popup7" class="info-pop">{{ digital.2.description }}</div>
+                  </th>
                 <td>{{ digital.2.item_1 }}</td>
                 <td>{{ digital.2.item_2 }}</td>
                 <td>{{ digital.2.item_3 }}</td>
@@ -158,4 +179,16 @@
     </div>
   </div>
 </div>
+
+<script>
+    function showPopup(popupId) {
+      document.getElementById(popupId).style.display = "block";
+    }
+  
+    function hidePopup(popupId) {
+      document.getElementById(popupId).style.display = "none";
+    }
+  </script>
+
+
 {% endblock %}
