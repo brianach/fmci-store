@@ -21,7 +21,7 @@ class Service(models.Model):
         return self.friendly_name
 
 
-class Compute(models.Model):
+class BaseService(models.Model):
     service = models.ForeignKey(
         'Service', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -33,21 +33,13 @@ class Compute(models.Model):
     item_3 = models.DecimalField(max_digits=10, decimal_places=0)
     item_4 = models.DecimalField(max_digits=10, decimal_places=0)
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        abstract = True
 
 
-class Digital(models.Model):
-    service = models.ForeignKey(
-        'Service', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
+class Compute(BaseService):
+    pass
 
-    item_1 = models.DecimalField(max_digits=10, decimal_places=0)
-    item_2 = models.DecimalField(max_digits=10, decimal_places=0)
-    item_3 = models.DecimalField(max_digits=10, decimal_places=0)
-    item_4 = models.DecimalField(max_digits=10, decimal_places=0)
 
-    def __str__(self):
-        return self.name
+class Digital(BaseService):
+    pass
