@@ -1,9 +1,9 @@
 [
     {
         "pk": 1,
-        "model": "service.compute",
+        "model": "service.digital",
         "fields": {
-            "service": 1,
+            "service": 2,
             "sku": "svcdig001",
             "name": "Unit",
             "description": "Available Units",
@@ -17,7 +17,7 @@
         "pk": 2,
         "model": "service.digital",
         "fields": {
-            "service": 1,
+            "service": 2,
             "sku": "svcdig002",
             "name": "API",
             "description": "API Calls in millions",
@@ -29,9 +29,9 @@
     },
     {
         "pk": 3,
-        "model": "service.compute",
+        "model": "service.digital",
         "fields": {
-            "service": 1,
+            "service": 2,
             "sku": "svcdig003",
             "name": "EX",
             "description": "Charge per excess API call",

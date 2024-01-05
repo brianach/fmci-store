@@ -1,6 +1,6 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
-{% block banner_text %}Onsite Only. Email info@fmci.ie for booking details{% endblock %}
+{% block banner_text %}Tenant Customers Only. Email info@fmci.ie for details.{% endblock %}
 {% load static %}
 
 {% block page_header %}
@@ -19,7 +19,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col text-center mt-3">
-        <h2 class="logo-font">Workservices</h2>
+        <h2 class="logo-font">Services</h2>
         <hr class="w-50 mb-1" />
       </div>
     </div>
@@ -47,41 +47,46 @@
         </div>
       </div>
       <div class="col">
-        <div class="container digital-table">
+        <div class="container service-table">
           <span><h3>{{ services.0.friendly_name }}</h3></span>
           <table class="table">
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">{{ digitalservices.0.name }}</th>
-                <th scope="col">{{ digitalservices.1.name }}</th>
-                <th scope="col">{{ digitalservices.2.name }}</th>
+                <th scope="col">{{ services.0.tier_1 }}</th>
+                <th scope="col">{{ services.0.tier_2 }}</th>
+                <th scope="col">{{ services.0.tier_3 }}</th>
+                <th scope="col">{{ services.0.tier_4 }}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">{{ services.0.term_a }}</th>
-                <td>{{ digitalservices.0.tier_a }}</td>
-                <td>{{ digitalservices.1.tier_a }}</td>
-                <td>{{ digitalservices.2.tier_a }}</td>
+                <th scope="row">{{ compute.0.name }}</th>
+                <td>{{ compute.0.item_1 }}</td>
+                <td>{{ compute.0.item_2 }}</td>
+                <td>{{ compute.0.item_3 }}</td>
+                <td>{{ compute.0.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ services.0.term_b }}</th>
-                <td>{{ digitalservices.0.tier_b }}</td>
-                <td>{{ digitalservices.1.tier_b }}</td>
-                <td>{{ digitalservices.2.tier_b }}</td>
+                <th scope="row">{{ compute.1.name }}</th>
+                <td>{{ compute.1.item_1 }}</td>
+                <td>{{ compute.1.item_2 }}</td>
+                <td>{{ compute.1.item_3 }}</td>
+                <td>{{ compute.1.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ services.0.term_c }}</th>
-                <td>{{ digitalservices.0.tier_c }}</td>
-                <td>{{ digitalservices.1.tier_c }}</td>
-                <td>{{ digitalservices.2.tier_c }}</td>
+                <th scope="row">{{ compute.2.name }}</th>
+                <td>{{ compute.2.item_1 }}</td>
+                <td>{{ compute.2.item_2 }}</td>
+                <td>{{ compute.2.item_3 }}</td>
+                <td>{{ compute.2.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ services.0.term_d }}</th>
-                <td>{{ digitalservices.0.tier_d }}</td>
-                <td>{{ digitalservices.2.tier_d }}</td>
-                <td>{{ digitalservices.2.tier_d }}</td>
+                <th scope="row">{{ compute.3.name }}</th>
+                <td>{{ compute.3.item_1 }}</td>
+                <td>{{ compute.3.item_2 }}</td>
+                <td>{{ compute.3.item_3 }}</td>
+                <td>{{ compute.3.item_4 }}</td>
               </tr>
             </tbody>
           </table>
@@ -112,35 +117,39 @@
         </div>
       </div>
       <div class="col">
-        <div class="container digital-table">
+        <div class="container service-table">
           <span><h3>{{ services.1.friendly_name }}</h3></span>
           <table class="table">
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">{{ computeservices.0.name }}</th>
-                <th scope="col">{{ computeservices.1.name }}</th>
-                <th scope="col">{{ computeservices.2.name }}</th>
+                <th scope="col">{{ services.1.tier_1 }}</th>
+                <th scope="col">{{ services.1.tier_2 }}</th>
+                <th scope="col">{{ services.1.tier_3 }}</th>
+                <th scope="col">{{ services.1.tier_4 }}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">{{ services.1.term_b }}</th>
-                <td>{{ computeservices.0.tier_b }}</td>
-                <td>{{ computeservices.1.tier_b }}</td>
-                <td>{{ computeservices.2.tier_b }}</td>
+                <th scope="row">{{ digital.0.name }}</th>
+                <td>{{ digital.0.item_1 }}</td>
+                <td>{{ digital.0.item_2 }}</td>
+                <td>{{ digital.0.item_3 }}</td>
+                <td>{{ digital.0.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ services.1.term_c }}</th>
-                <td>{{ computeservices.0.tier_c }}</td>
-                <td>{{ computeservices.1.tier_c }}</td>
-                <td>{{ computeservices.2.tier_c }}</td>
+                <th scope="row">{{ digital.1.name }}</th>
+                <td>{{ digital.1.item_1 }}</td>
+                <td>{{ digital.1.item_2 }}</td>
+                <td>{{ digital.1.item_3 }}</td>
+                <td>{{ digital.1.item_4 }}</td>
               </tr>
               <tr>
-                <th scope="row">{{ services.1.term_d }}</th>
-                <td>{{ computeservices.0.tier_d }}</td>
-                <td>{{ computeservices.2.tier_d }}</td>
-                <td>{{ computeservices.2.tier_d }}</td>
+                <th scope="row">{{ digital.2.name }}</th>
+                <td>{{ digital.2.item_1 }}</td>
+                <td>{{ digital.2.item_2 }}</td>
+                <td>{{ digital.2.item_3 }}</td>
+                <td>{{ digital.2.item_4 }}</td>
               </tr>
             </tbody>
           </table>

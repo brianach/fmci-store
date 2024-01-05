@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brianach-fmci-store-zddq9pdd7p.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-brianach-fmcistore-wbhiuv9fc0k.ws-eu107.gitpod.io']
 
 
 # Application definition
