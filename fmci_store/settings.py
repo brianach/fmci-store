@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brianach-fmcistore-wbhiuv9fc0k.ws-eu107.gitpod.io', 'fmci-store-a822ef1f1b5f.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = ['8000-brianach-fmcistore-wbhiuv9fc0k.ws-eu107.gitpod.io',
+                 'fmci-store-a822ef1f1b5f.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -116,7 +116,18 @@ WSGI_APPLICATION = 'fmci_store.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
@@ -129,6 +140,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
