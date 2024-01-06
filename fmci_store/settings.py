@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brianach-fmcistore-wbhiuv9fc0k.ws-eu107.gitpod.io',
+ALLOWED_HOSTS = ['8000-brianach-fmci-store-cwuej29flt.us2.codeanyapp.com',
                  'fmci-store-a822ef1f1b5f.herokuapp.com', 'localhost']
 
 # Application definition
