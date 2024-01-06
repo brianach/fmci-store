@@ -5,11 +5,11 @@
         "fields": {
             "name": "compute",
             "friendly_name": "Compute Container",
-            "image": "datacentre.webp",
-            "tier_1": "tier_1",
-            "tier_2": "tier_2",
-            "tier_3": "tier_3",
-            "tier_4": "tier_4"
+            "image": "compute.webp",
+            "tier_1": "Tier 1",
+            "tier_2": "Tier 2",
+            "tier_3": "Tier 3",
+            "tier_4": "Tier 4"
         }
     },
     {
@@ -19,10 +19,10 @@
             "name": "digital",
             "friendly_name": "Digital Twin",
             "image": "digital.webp",
-            "tier_1": "tier_1",
-            "tier_2": "tier_2",
-            "tier_3": "tier_3",
-            "tier_4": "tier_4"
+            "tier_1": "Tier 1",
+            "tier_2": "Tier 2",
+            "tier_3": "Tier 3",
+            "tier_4": "Tier 4"
         }
     }
 ]

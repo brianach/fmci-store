@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brianach-fmci-store-cwuej29flt.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-brianach-fmci-store-yksakfhcx3.us2.codeanyapp.com',
                  'fmci-store-a822ef1f1b5f.herokuapp.com', 'localhost']
 
 # Application definition
@@ -115,20 +115,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'fmci_store.wsgi.application'
 
 
-# Database
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-
-
+#Database
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
