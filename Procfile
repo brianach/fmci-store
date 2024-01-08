@@ -1,1 +1,1 @@
-web: gunicorn fmci-store.wsgi:application
+web: gunicorn fmci_store.wsgi:application
